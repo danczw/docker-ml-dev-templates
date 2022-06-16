@@ -30,9 +30,23 @@ docker build -t <tag> .
 ```
 After build is completed, run it through:
 ```bash
-docker run -it -p 8000:8000 <tag>
+docker run -it -p 8888:8888 <tag>
 ```
 Activate the conda env
 ```bash
 conda activate myenv
 ```
+
+<br>
+
+------
+
+<br>
+
+## Jupyter Notebooks
+
+To run jupyter notebooks, run following command when connect to the container
+```bash	
+jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
+```
+Notebooks are then exposed to [http://127.0.0.1:8888/tree](http://127.0.0.1:8888/tree).
