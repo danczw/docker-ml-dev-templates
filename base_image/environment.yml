@@ -1,0 +1,14 @@
+name: myenv
+
+channels:
+  - default
+
+dependencies:
+  - python=3.9
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - seaborn
