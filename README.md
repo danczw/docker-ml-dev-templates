@@ -14,7 +14,7 @@ Each image includes a conda env using Python 3.9 and varying ML frameworks. All 
 - [`scipy`](https://www.scipy.org/)
 - [`seaborn`](https://seaborn.pydata.org/)
 
-The envs running in the container can be extended by updating the respective image conda env file.
+The envs running in the container can be extended by updating the respective image conda env file or via `conda install <module>` when connected to containter.
 
 <br>
 
