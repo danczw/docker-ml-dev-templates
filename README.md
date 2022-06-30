@@ -6,8 +6,6 @@ Various Docker images for your ML development workflow using Anaconda.
 
 Each image includes a conda env using Python 3.9 and varying ML frameworks.
 
-The envs running in the container can be extended by updating the respective image conda env file or via `conda install <module>` when connected to containter.
-
 <br>
 
 ------
@@ -15,6 +13,8 @@ The envs running in the container can be extended by updating the respective ima
 <br>
 
 ## Images
+
+The envs running in the container can be extended by updating the respective image conda env file or via `conda install <module>` when connected to containter.
 
 ### base image
 
