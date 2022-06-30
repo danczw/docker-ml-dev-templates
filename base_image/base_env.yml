@@ -1,4 +1,4 @@
-name: myenv
+name: base_env
 
 channels:
   - default

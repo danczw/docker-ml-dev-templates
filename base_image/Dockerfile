@@ -9,12 +9,12 @@ COPY . /app
 SHELL ["/bin/bash", "--login", "-c"]
 
 # create conda env and install dependencies
-RUN conda env create -f environment.yml
+RUN conda env create -f base_env.yml
 # activate env when running container
-RUN echo "conda activate myenv" >> ~/.bashrc
+RUN echo "conda activate base_env" >> ~/.bashrc
 
 # let RUN commands use the miniconda env
-SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", "base_env", "/bin/bash", "-c"]
 
 # make conda env available as kernel for jupyter
-RUN python -m ipykernel install --user --name=myenv
+RUN python -m ipykernel install --user --name=base_env
