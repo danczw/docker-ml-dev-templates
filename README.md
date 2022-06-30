@@ -16,7 +16,7 @@ The envs running in the container can be extended by updating the respective ima
 
 ## Images
 
-#### base image
+### base image
 
 All images include the following base Python packages (base_image):
 
@@ -28,7 +28,7 @@ All images include the following base Python packages (base_image):
 - [`scipy`](https://www.scipy.org/)
 - [`seaborn`](https://seaborn.pydata.org/)
 
-#### tensorflow image
+### tensorflow image
 
 The tensorflow image extends the base image by the following packages:
 
