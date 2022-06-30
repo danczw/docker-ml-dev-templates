@@ -5,7 +5,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 WORKDIR /app
 COPY . /app
 
-# Make RUN commands use `bash --login`
+# make RUN commands use `bash --login`
 SHELL ["/bin/bash", "--login", "-c"]
 
 # create conda env and install dependencies
@@ -15,3 +15,6 @@ RUN echo "conda activate myenv" >> ~/.bashrc
 
 # let RUN commands use the miniconda env
 SHELL ["conda", "run", "-n", "myenv", "/bin/bash", "-c"]
+
+# make conda env available as kernel for jupyter
+RUN python -m ipykernel install --user --name=myenv

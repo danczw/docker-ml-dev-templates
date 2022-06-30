@@ -4,7 +4,8 @@
 
 Various Docker images for your ML development workflow using Anaconda. 
 
-Each image includes a conda env using Python 3.9 and varying ML frameworks. All images include the following base Python packages (base_image):
+Each image includes a conda env using Python 3.9 and varying ML frameworks.
+All images include the following base Python packages (base_image):
 
 - [`jupyter`](https://jupyter.org/)
 - [`matplotlib`](https://matplotlib.org/)
@@ -32,7 +33,7 @@ After build is completed, run it through:
 ```bash
 docker run -it -p 8888:8888 <tag>
 ```
-Activate the conda env
+Activate the conda env within the container:
 ```bash
 conda activate myenv
 ```
@@ -45,8 +46,8 @@ conda activate myenv
 
 ## Jupyter Notebooks
 
-To run jupyter notebooks, run following command when connect to the container
+To run jupyter notebooks, run following command within the container:
 ```bash	
 jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
 ```
-Notebooks are then exposed to [http://127.0.0.1:8888/tree](http://127.0.0.1:8888/tree).
+Notebooks are then exposed to [http://127.0.0.1:8888/tree](http://127.0.0.1:8888/tree) or via the link displayed in the container terminal.
