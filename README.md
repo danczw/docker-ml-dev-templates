@@ -34,6 +34,14 @@ The tensorflow image extends the base image by the following packages:
 
 - [`tensorflow`](https://www.tensorflow.org/)
 
+### pytorch image
+
+The pytorch image extends the base image by the following packages:
+
+- [`pytorch`](https://pytorch.org/)
+
+Note: The environment is setup to use the pytorch library with CUDA, resulting in extended build time. To use only CPU based pytorch, exchange the `pytorch` (line 13) package with `pytorch-cpu` in [./pytorch_image/pytorch_env.yml](./pytorch_image/pytorch_env.yml).
+
 <br>
 
 ------

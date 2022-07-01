@@ -1,0 +1,16 @@
+name: pytorch_env
+
+channels:
+  - default
+  - pytorch
+
+dependencies:
+  - python=3.9
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - pytorch
+  - scipy
+  - scikit-learn
+  - seaborn
