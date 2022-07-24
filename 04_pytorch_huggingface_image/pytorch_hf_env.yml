@@ -1,0 +1,21 @@
+name: pytorch_hf_env
+
+channels:
+  - pytorch
+  - huggingface
+  - default
+
+dependencies:
+  - datasets
+  - huggingface_hub
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - python
+  - pytorch
+  - scipy
+  - scikit-learn
+  - seaborn
+  - torchvision
+  - transformers
