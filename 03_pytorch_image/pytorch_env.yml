@@ -5,12 +5,13 @@ channels:
   - pytorch
 
 dependencies:
-  - python=3.9
   - jupyter
   - matplotlib
   - numpy
   - pandas
-  - pytorch
+  - pytorch=1.10.2
+  - python=3.9.12
   - scipy
   - scikit-learn
   - seaborn
+  - torchvision=0.11.3
