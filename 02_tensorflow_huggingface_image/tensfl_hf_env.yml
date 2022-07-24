@@ -1,0 +1,19 @@
+name: tensfl_hf_env
+
+channels:
+  - huggingface
+  - default
+
+dependencies:
+  - datasets
+  - huggingface_hub
+  - jupyter
+  - matplotlib
+  - numpy
+  - pandas
+  - python
+  - scipy
+  - scikit-learn
+  - seaborn
+  - tensorflow
+  - transformers
