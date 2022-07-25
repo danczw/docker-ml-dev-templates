@@ -16,5 +16,8 @@ RUN echo "conda activate tensfl_hf_env" >> ~/.bashrc
 # let RUN commands use the miniconda env
 SHELL ["conda", "run", "-n", "tensfl_hf_env", "/bin/bash", "-c"]
 
+# add alias to bash profile for easy jupyter access
+RUN echo 'alias expose_jpt="jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root"' >> ~/.bashrc
+
 # make conda env available as kernel for jupyter
 RUN python -m ipykernel install --user --name=tensfl_hf_env

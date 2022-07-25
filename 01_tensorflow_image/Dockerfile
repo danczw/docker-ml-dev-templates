@@ -13,6 +13,9 @@ RUN conda env create -f tensfl_env.yml
 # activate env when running container
 RUN echo "conda activate tensfl_env" >> ~/.bashrc
 
+# add alias to bash profile for easy jupyter access
+RUN echo 'alias expose_jpt="jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root"' >> ~/.bashrc
+
 # let RUN commands use the miniconda env
 SHELL ["conda", "run", "-n", "tensfl_env", "/bin/bash", "-c"]
 
