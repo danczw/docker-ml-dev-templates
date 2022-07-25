@@ -14,6 +14,8 @@ Each image includes a conda env using Python 3.9 and varying ML frameworks.
 
 ## Images
 
+These images should be seen as baseline images for ML development. Python package versions are not defined to increase maintainability of the templates and can be update in the respective `.yml` files.
+
 The envs running in the container can be extended by updating the respective image conda env file or via `conda install <module>` when connected to containter.
 
 <table>
@@ -76,7 +78,6 @@ The envs running in the container can be extended by updating the respective ima
             The pytorch image extends the base image by the following packages:
             <ul>
                 <li><a href="https://pytorch.org/">pytorch</a></li>
-                <li><a href="https://pytorch.org/docs/stable/torchvision/">torchvision</a></li>
             </ul>
         </td>
         <td>
@@ -91,7 +92,6 @@ The envs running in the container can be extended by updating the respective ima
             The pytorch huggingface image extends the base image by the following packages:
             <ul>
                 <li><a href="https://pytorch.org/">pytorch</a></li>
-                <li><a href="https://pytorch.org/docs/stable/torchvision/">torchvision</a></li>
                 <li><a href="https://huggingface.co/docs/huggingface_hub/index">huggingface hub</a></li>
                 <li><a href="https://huggingface.co/datasets/">huggingface datasets</a></li>
                 <li><a href="https://huggingface.co/transformers/">huggingface transformers</a></li>
@@ -132,8 +132,10 @@ conda activate <env_name>
 
 ## Jupyter Notebooks
 
-To run jupyter notebooks, run following command within the container:
+To run jupyter notebooks, run the following command within the container:
 ```bash
 jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
 ```
-Notebooks are either exposed to [http://127.0.0.1:8888/tree](http://127.0.0.1:8888/tree) or to the link displayed in the container terminal.
+Alternatively, an alias has been added to the `~/.bashrc` profile. Simply run `expose_jpt` within the containter terminal. 
+
+By default, notebooks are either exposed to [http://127.0.0.1:8888/tree](http://127.0.0.1:8888/tree) or to the link displayed in the container terminal.
