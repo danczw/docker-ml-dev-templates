@@ -13,9 +13,8 @@ dependencies:
   - numpy
   - pandas
   - python
-  - pytorch
+  - pytorch-cpu
   - scipy
   - scikit-learn
   - seaborn
-  - torchvision
   - transformers
