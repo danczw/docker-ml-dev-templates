@@ -27,7 +27,9 @@ The envs running in the container can be extended by updating the respective ima
         <th>Notes</th>
     </tr>
         <td>
-            Base Image: py-ml-dev-base - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-base)
+            Base Image: py-ml-dev-base
+            <br><br>
+            <a href="https://hub.docker.com/r/danczw/py-ml-dev-base">Docker Hub Link</a>
         </td>
         <td>
             All images include the following base Python packages (base_image):
@@ -45,7 +47,9 @@ The envs running in the container can be extended by updating the respective ima
         </td>
     <tr>
         <td>
-            Tensorflow Image: py-ml-dev-tf - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-tf)
+            Tensorflow Image: py-ml-dev-tf
+            <br><br>
+            <a href="https://hub.docker.com/r/danczw/py-ml-dev-tf">Docker Hub Link</a>
         </td>
         <td>
             The tensorflow image extends the base image by the following packages:
@@ -58,7 +62,9 @@ The envs running in the container can be extended by updating the respective ima
     </tr>
     <tr>
         <td>
-            Tensorflow HuggingFace Image: py-ml-dev-huggingtf - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-huggingtf)
+            Tensorflow HuggingFace Image: py-ml-dev-huggingtf
+            <br><br>
+            <a href="https://hub.docker.com/r/danczw/py-ml-dev-huggingtf">Docker Hub Link</a>
         </td>
         <td>
             The tensorflow huggingface image extends the base image by the following packages:
@@ -74,7 +80,9 @@ The envs running in the container can be extended by updating the respective ima
     </tr>
     <tr>
         <td>
-            PyTorch Image: py-ml-dev-torch - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-torch)
+            PyTorch Image: py-ml-dev-torch
+            <br><br>
+            <a href="https://hub.docker.com/r/danczw/py-ml-dev-torch">Docker Hub Link</a>
         </td>
         <td>
             The pytorch image extends the base image by the following packages:
@@ -88,7 +96,9 @@ The envs running in the container can be extended by updating the respective ima
     </tr>
     <tr>
         <td>
-            PyTorch HuggingFace Image: py-ml-dev-huggingtorch - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-huggingtorch)
+            PyTorch HuggingFace Image: py-ml-dev-huggingtorch
+            <br><br>
+            <a href="https://hub.docker.com/r/danczw/py-ml-dev-huggingtorch">Docker Hub Link</a>
         </td>
         <td>
             The pytorch huggingface image extends the base image by the following packages:
