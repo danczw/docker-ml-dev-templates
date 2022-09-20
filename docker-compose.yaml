@@ -1,0 +1,31 @@
+version: "3"
+services:
+  py-ml-dev-base:
+    image: py-ml-dev-base
+    container_name: py-ml-dev-base
+    build:
+      context: ./00_base_image
+
+  py-ml-dev-tf:
+    image: py-ml-dev-tf
+    container_name: py-ml-dev-tf
+    build:
+      context: ./01_tensorflow_image
+  
+  py-ml-dev-huggingtf:
+    image: py-ml-dev-huggingtf
+    container_name: py-ml-dev-huggingtf
+    build:
+      context: ./02_tensorflow_huggingface_image
+      
+  py-ml-dev-torch:
+    image: py-ml-dev-torch
+    container_name: py-ml-dev-torch
+    build:
+      context: ./03_pytorch_image
+  
+  py-ml-dev-huggingtorch:
+    image: py-ml-dev-huggingtorch
+    container_name: py-ml-dev-huggingtorch
+    build:
+      context: ./04_pytorch_huggingface_image
