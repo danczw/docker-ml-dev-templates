@@ -6,6 +6,8 @@ Various Docker images for your ML development workflow using Anaconda.
 
 Each image includes a conda env using Python 3.9 and varying ML frameworks.
 
+All images are available on [Docker Hub](https://hub.docker.com/u/danczw).
+
 <br>
 
 ------
@@ -25,7 +27,7 @@ The envs running in the container can be extended by updating the respective ima
         <th>Notes</th>
     </tr>
         <td>
-            Base Image
+            Base Image: py-ml-dev-base - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-base)
         </td>
         <td>
             All images include the following base Python packages (base_image):
@@ -43,7 +45,7 @@ The envs running in the container can be extended by updating the respective ima
         </td>
     <tr>
         <td>
-            Tensorflow Image
+            Tensorflow Image: py-ml-dev-tf - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-tf)
         </td>
         <td>
             The tensorflow image extends the base image by the following packages:
@@ -56,7 +58,7 @@ The envs running in the container can be extended by updating the respective ima
     </tr>
     <tr>
         <td>
-            Tensorflow HuggingFace Image
+            Tensorflow HuggingFace Image: py-ml-dev-huggingtf - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-huggingtf)
         </td>
         <td>
             The tensorflow huggingface image extends the base image by the following packages:
@@ -72,7 +74,7 @@ The envs running in the container can be extended by updating the respective ima
     </tr>
     <tr>
         <td>
-            PyTorch Image
+            PyTorch Image: py-ml-dev-torch - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-torch)
         </td>
         <td>
             The pytorch image extends the base image by the following packages:
@@ -86,7 +88,7 @@ The envs running in the container can be extended by updating the respective ima
     </tr>
     <tr>
         <td>
-            PyTorch HuggingFace Image
+            PyTorch HuggingFace Image: py-ml-dev-huggingtorch - [Docker Hub Link](https://hub.docker.com/r/danczw/py-ml-dev-huggingtorch)
         </td>
         <td>
             The pytorch huggingface image extends the base image by the following packages:
@@ -98,7 +100,7 @@ The envs running in the container can be extended by updating the respective ima
             </ul>
         </td>
         <td>
-            The environment is setup to use the pytorch library without CUDA. To use only CPU based pytorch, exchange the `pytorch-cpu` package with `pytorch` in `./pytorch_image/pytorch_env.yml` (resulting in extended build time).
+            The environment is setup to use the pytorch library without CUDA. To use GPU based pytorch, exchange the `pytorch-cpu` package with `pytorch` in (./pytorch_image/pytorch_env.yml)[./pytorch_image/pytorch_env.yml] (resulting in extended build time).
         </td>
     </tr>
 </table>
@@ -112,17 +114,22 @@ The envs running in the container can be extended by updating the respective ima
 ## Setup
 
 To build the image, cd into the respective image directory and run:
-```bash
-docker build -t <tag> .
-```
+
+    docker build -t <tag> .
+
 After build is completed, run it through:
-```bash
-docker run -it -p 8888:8888 <tag>
-```
+
+    docker run -it -p 8888:8888 <tag>
+
 Activate the conda env within the container:
-```bash
-conda activate <env_name>
-```
+
+    conda activate <env_name>
+
+The [publish-to-hub.bash](publish-to-hub.bash) script can be used to bulk publish the images to Docker Hub. Make sure to have Docker Desktop running and to be logged in to Docker Hub.
+
+    bash publish-to-hub.bash -u <docker_hub_username> -s <bool>
+
+The `-s` flag can be used to scan the images.
 
 <br>
 
@@ -139,3 +146,13 @@ jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
 Alternatively, an alias has been added to the `~/.bashrc` profile. Simply run `expose_jpt` within the containter terminal. 
 
 By default, notebooks are either exposed to [http://127.0.0.1:8888/tree](http://127.0.0.1:8888/tree) or to the link displayed in the container terminal.
+
+<br>
+
+--------------------------------------------------------------------------------
+
+<br>
+
+# TODOs
+
+☐ optimize image size
